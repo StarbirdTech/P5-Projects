@@ -5,7 +5,7 @@ let mode = 0
 
 function preload()
 {
-  frog = loadImage("frog.jpg")
+  frog = loadImage("audio.jpg")
 }
 
 function setup() {
