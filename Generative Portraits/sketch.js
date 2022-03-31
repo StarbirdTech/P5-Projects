@@ -1,28 +1,49 @@
-function setup() {
-  createCanvas(2400, 1350);
+function preload()
+{
   frog = loadImage("frog.jpg");
+}
+
+function setup() {
+  createCanvas(858, 536);
   pixelDensity(1)
 }
 
 function draw() {
-  background(0)
+  //background(0)
+  noStroke()
   // image(frog,0,0)
   loadPixels();
   frog.loadPixels();
+  frameRate(120)
+  for(i = 0 ;i<30;i++)
+      paintWithPixels()
+  
+}
 
-  for (y = 0; y < height; y++) {
+
+function paintWithPixels()
+{
+  x = random(0,width)
+  y = random(0,height)
+  fill(frog.get(int(x),int(y)))
+  circle(x,y,20)
+}
+
+function blur()
+{
+  noStroke()
+   for (y = 0; y < height; y++) {
     for (x = 0; x < width; x++) {
       index = (x+y*width)*4
-      pixels[index + 0] = 255  //frog.pixels[index + 0]
-      pixels[index + 1] = 255 - frog.pixels[index + 1]
-      pixels[index + 2] = 255 - frog.pixels[index + 2]
+      pixels[index + 0] = frog.pixels[index + 0]
+      pixels[index + 1] = frog.pixels[index + 1]
+      pixels[index + 2] = frog.pixels[index + 2]
       pixels[index + 3] = frog.pixels[index + 3]
-
-      if (x % 100 == 0 && y % 100 == 0) {
-        fill(255,0,0)
-        circle(x,y,100)
-      }
     }
   }
-  updatePixels();
+}
+
+function mousePressed()
+{
+  save()
 }
