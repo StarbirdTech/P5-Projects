@@ -1,11 +1,18 @@
+let px
+let py
+
+let mode = 0
+
 function preload()
 {
-  frog = loadImage("frog.jpg");
+  frog = loadImage("frog.jpg")
 }
 
 function setup() {
-  createCanvas(858, 536);
+  createCanvas(858, 536)
+  frog.resize(width,height)
   pixelDensity(1)
+  strokeWeight(5)
 }
 
 function draw() {
@@ -23,10 +30,28 @@ function draw() {
 
 function paintWithPixels()
 {
+  //px = x
+  //py = y
+
   x = random(0,width)
   y = random(0,height)
-  fill(frog.get(int(x),int(y)))
-  circle(x,y,20)
+  stroke(frog.get(int(x),int(y)))
+  if (mode == 1) {
+    circle(x,y,10)
+  }
+  else if (mode == -1) {
+    line(random(0,width),random(0,height),random(0,width),random(0,height))
+  }
+  else {
+    stroke(0)
+    background(0)
+    push()
+    fill(255)
+    text('<Press Key to Start >', width/2, height/2)
+    pop()
+  }
+  
+  
 }
 
 function blur()
@@ -43,7 +68,17 @@ function blur()
   }
 }
 
+/*
 function mousePressed()
 {
   save()
+}
+*/
+
+function keyPressed() {
+  if (mode == 0) {
+    mode = 1
+  } else {
+    mode *= -1
+  }
 }
