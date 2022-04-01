@@ -10,48 +10,29 @@ function preload()
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
-  img.resize(width,height)
+  resize(img)
   pixelDensity(1)
   strokeWeight(5)
+  frameRate(120)
 }
 
 function draw() {
-  //background(0)
-  noStroke()
-  // image(frog,0,0)
   loadPixels();
   img.loadPixels();
-  frameRate(120)
-  drawCircles()
-  /*
-  for(i = 0 ;i<30;i++)
-      paintWithPixels()
-  */
-}
 
-
-function paintWithPixels()
-{
-  //px = x
-  //py = y
-
-  x = random(0,width)
-  y = random(0,height)
-  noStroke()
-  fill(frog.get(int(x),int(y)))
   if (mode == 0) {
     push()
     stroke(0)
     background(0)
     fill(255)
-    text('<Press Key to Start >', width/2, height/2)
+    text('<Press Space to Start >', width/2, height/2)
     pop()
   }
   else if (mode == 1) {
-    circle(x,y,10)
+    drawCircles()
   }
   else if (mode == 2) {
-    line(random(0,width),random(0,height),random(0,width),random(0,height))
+    drawLines()
   }
   else {
     mode = 1
@@ -72,18 +53,16 @@ function blur()
   }
 }
 
-function keyPressed() {
-  mode ++
-
-  if (keyCode == 28) {
-    mode = 0
-  }
-}
-
-// save the canvas as a png
+// keyboard controls
 function keyTyped() {
   if (key === 's') {
     saveCanvas('sketch', 'png');
+  }
+  else if (key === 'r') {
+    mode = 0
+  }
+  else if (key === ' ') {
+    mode ++
   }
 }
 
@@ -130,26 +109,20 @@ function wanderingLine() {
   stroke(img.get(x, y));
   line(x, y, x + len * cos(a), y + len * sin(a));
 }
-/*
+
+function stackingLines() {
   for (let i = 0; i < 1000; i++) {
     let x1 = random(width);
     let y1 = random(height);
     let x2 = random(width);
     let y2 = random(height);
     noStroke();
-    fill(frog.get(x1, y1));
+    fill(img.get(x1, y1));
     ellipse(x1, y1, 10, 10);
-    fill(frog.get(x2, y2));
+    fill(img.get(x2, y2));
     ellipse(x2, y2, 10, 10);
-    stroke(frog.get(x1, y1));
+    stroke(img.get(x1, y1));
     line(x1, y1, x2, y2);
   }
-}*/
-
-// function to crop and resize the image to fill the canavs
-function resize() {
-  //crop the image to the size of the canvas
-  image(img, 0, 0, width, height);
-  //resize the image to the size of the canvas
-  img.resize(width, height);
 }
+
