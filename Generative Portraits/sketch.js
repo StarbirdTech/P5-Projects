@@ -3,13 +3,14 @@ let py
 
 let mode = 0
 
+
 function preload()
 {
-  frog = loadImage("audio.jpg")
+  frog = loadImage("curri.jpg")
 }
 
 function setup() {
-  createCanvas(858, 536)
+  createCanvas(windowWidth, windowHeight)
   frog.resize(width,height)
   pixelDensity(1)
   strokeWeight(5)
@@ -35,23 +36,25 @@ function paintWithPixels()
 
   x = random(0,width)
   y = random(0,height)
-  stroke(frog.get(int(x),int(y)))
-  if (mode == 1) {
-    circle(x,y,10)
-  }
-  else if (mode == -1) {
-    line(random(0,width),random(0,height),random(0,width),random(0,height))
-  }
-  else {
+  noStroke()
+  fill(frog.get(int(x),int(y)))
+  if (mode == 0) {
+    push()
     stroke(0)
     background(0)
-    push()
     fill(255)
     text('<Press Key to Start >', width/2, height/2)
     pop()
   }
-  
-  
+  else if (mode == 1) {
+    circle(x,y,10)
+  }
+  else if (mode == 2) {
+    line(random(0,width),random(0,height),random(0,width),random(0,height))
+  }
+  else {
+    mode = 1
+  }
 }
 
 function blur()
@@ -76,9 +79,9 @@ function mousePressed()
 */
 
 function keyPressed() {
-  if (mode == 0) {
-    mode = 1
-  } else {
-    mode *= -1
+  mode ++
+
+  if (keyCode == 28) {
+    mode = 0
   }
 }
