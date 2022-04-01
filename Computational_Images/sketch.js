@@ -11,7 +11,7 @@ function preload()
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight)
+  createCanvas(600, 600)
   img.resize(width, height)
   pixelDensity(1)
   strokeWeight(5)
@@ -30,13 +30,18 @@ function draw() {
     stroke(0)
     background(0)
     fill(255)
-    text('<Press Space to Start >', width/2, height/2)
+    textSize(32)
+    textAlign(CENTER, CENTER)
+    text("Press Space to Start", width/2, height/2)
     pop()
   }
   else if (mode == 1) {
-    drawCircles()
+    drawHollowCircles()
   }
   else if (mode == 2) {
+    drawCircles()
+  }
+  else if (mode == 3) {
     wanderingLine()
   }
   else {
@@ -77,8 +82,19 @@ function drawCircles() {
     let x = random(width);
     let y = random(height);
     let d = random(1, 10);
-    noStroke();
+    noStroke()
     fill(img.get(x, y));
+    ellipse(x, y, d, d);
+  }
+}
+
+function drawHollowCircles() {
+  for (let i = 0; i < 1000; i++) {
+    let x = random(width);
+    let y = random(height);
+    let d = random(1, 10);
+    fill(255)
+    stroke(img.get(x, y));
     ellipse(x, y, d, d);
   }
 }
