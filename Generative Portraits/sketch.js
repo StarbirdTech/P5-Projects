@@ -6,7 +6,7 @@ let mode = 0
 
 function preload()
 {
-  frog = loadImage("e.png")
+  frog = loadImage("frog.jpg")
 }
 
 function setup() {
