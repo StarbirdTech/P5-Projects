@@ -1,5 +1,7 @@
-let px
-let py
+let x
+let y
+let x1
+let y1
 
 let mode = 0
 
@@ -10,10 +12,13 @@ function preload()
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
-  resize(img)
+  img.resize(width, height)
   pixelDensity(1)
   strokeWeight(5)
   frameRate(120)
+
+  x = random(width)
+  y = random(height)
 }
 
 function draw() {
@@ -32,7 +37,7 @@ function draw() {
     drawCircles()
   }
   else if (mode == 2) {
-    drawLines()
+    wanderingLine()
   }
   else {
     mode = 1
@@ -95,34 +100,15 @@ function drawLines() {
   }
 }
 
+// draw a line that randomly moves around the screen
 function wanderingLine() {
-  //limit line length to 10 px
-  let maxLength = 10;
-  //start the line at a random position
-  let x = random(width);
-  let y = random(height);
-  //start the line at a random angle
-  let a = random(TWO_PI);
-  //start the line at a random length
-  let len = random(maxLength);
-  //draw the line
-  stroke(img.get(x, y));
-  line(x, y, x + len * cos(a), y + len * sin(a));
+  px = random(0,width/8);
+  py = random(0,height/8);
+  px+=random(0,100)
+  py+=random(0,100)
+  img.loadPixels();
+  stroke(img.get(x,y))
+  line(x, y, px, py);
+  x = px;
+  y = py;
 }
-
-function stackingLines() {
-  for (let i = 0; i < 1000; i++) {
-    let x1 = random(width);
-    let y1 = random(height);
-    let x2 = random(width);
-    let y2 = random(height);
-    noStroke();
-    fill(img.get(x1, y1));
-    ellipse(x1, y1, 10, 10);
-    fill(img.get(x2, y2));
-    ellipse(x2, y2, 10, 10);
-    stroke(img.get(x1, y1));
-    line(x1, y1, x2, y2);
-  }
-}
-
