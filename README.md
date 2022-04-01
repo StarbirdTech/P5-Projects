@@ -10,4 +10,4 @@ All of my [P5.js](https://p5js.org) projects
 [Computational Images](https://starbirdtech.github.io/P5-Projects/Computational_Images\index.html) - In Progress
 
 
-*[https://starbirdtech.github.io/P5-Projects/](https://starbirdtech.github.io/P5-Projects/)*
+If you are on [github.com](https://github.com/StarbirdTech/P5-Projects/) please [click here](https://starbirdtech.github.io/P5-Projects/).
