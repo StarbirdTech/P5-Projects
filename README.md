@@ -4,4 +4,4 @@ All of my P5.js projects
 
 [Red Line](Red Line\index.html) - In Progress
 
-[Computational Images](Generative Portraits\sketch.js) - In Progress
+[Computational Images](Generative Portraits\index.html) - In Progress
