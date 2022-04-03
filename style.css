@@ -9,6 +9,26 @@ body {
 	background: #424549;
 }
 
+main {
+	display: table;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+  }
+  
+  .centered {
+	display: table-cell;
+	vertical-align: middle;
+  }
+  
+  .cards {
+	margin-left: auto;
+	margin-right: auto;
+	/* Whatever width you want */
+  }
+
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
@@ -77,32 +97,16 @@ img {
 
 /* Flexbox stuff */
 
-.grow {
-	padding: 5px 5px 5px 5px;
-	border-radius: 10px;
-	height: 49px;
-	width: 22%;
-	margin: 5px 1% 5px 1%;
-	float: left;
-	position: relative;
-	transition: height 0.5s;
-	-webkit-transition: height 0.5s;
-	text-align: center;
-	overflow: hidden;
-  }
-  .grow:hover {
-	height: 145px;
-  }
-
 .cards {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
  }
 
 .card {
 	flex: 1 0 500px;
 	box-sizing: border-box;
-	margin: 1rem .25em;
+	margin: 1%;
 	border-radius: 10px;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -111,13 +115,13 @@ img {
 		box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 	}
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 100em) {
 	.card {
 		max-width: calc(50% -  1em);
 	}
 }
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 50em) {
 	.card {
 		max-width: calc(25% - 1em);
     }
