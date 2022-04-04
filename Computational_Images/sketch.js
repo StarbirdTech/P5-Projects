@@ -76,6 +76,10 @@ function keyTyped() {
   }
 }
 
+function mouseClicked() {
+  mode ++
+}
+
 // randomly draw circles using the color data from the image
 function drawCircles() {
   for (let i = 0; i < 1000; i++) {
