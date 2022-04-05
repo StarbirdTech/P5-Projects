@@ -5,14 +5,12 @@ let y1
 
 let mode = 0
 
-function preload()
-{
-  img = loadImage("curri.jpg")
-}
+file = ["curri.jpg","frog.jpg","audio_viz_1.jpg","audio_viz_2.png","e.png","glowing_cube.jpg","isa.jpg","splatter.jpg","faceted_shape.png"]
+currentFile = 0
 
 function setup() {
   createCanvas(600, 600)
-  img.resize(width, height)
+  loadImg()
   pixelDensity(1)
   strokeWeight(5)
   frameRate(120)
@@ -39,7 +37,7 @@ function draw() {
     drawHollowCircles()
   }
   else if (mode == 2) {
-    drawCircles()
+    drawShapes()
   }
   else if (mode == 3) {
     wanderingLine()
@@ -47,21 +45,14 @@ function draw() {
   else {
     mode = 1
   }
+  push()
+  fill(255)
+  stroke(0)
+  text(mouseX, 10, 15)
+  text(mouseY, 10, 35)
+  pop()
 }
 
-function blur()
-{
-  noStroke()
-   for (y = 0; y < height; y++) {
-    for (x = 0; x < width; x++) {
-      index = (x+y*width)*4
-      pixels[index + 0] = img.pixels[index + 0]
-      pixels[index + 1] = img.pixels[index + 1]
-      pixels[index + 2] = img.pixels[index + 2]
-      pixels[index + 3] = img.pixels[index + 3]
-    }
-  }
-}
 
 // keyboard controls
 function keyTyped() {
@@ -71,31 +62,72 @@ function keyTyped() {
   else if (key === 'r') {
     mode = 0
   }
+  else if (key === 'n') {
+    currentFile++
+    if (currentFile > file.length-1) {
+      currentFile = 0
+    }
+    loadImg()
+  }
   else if (key === ' ') {
     mode ++
   }
 }
 
+// when upper left quarter of screen is clicked subtract one from current file
+// when upper right quarter of screen is clicked add one to current file
+// when lower left quarter of screen is clicked subtract one from mode
+// when lower right quarter of screen is clicked add one to mode
 function mouseClicked() {
-  mode ++
+  if (mouseX < width/2 && mouseY < height/2) {
+    currentFile--
+  }
+  else if (mouseX > width/2 && mouseY < height/2) {
+    currentFile++
+  }
+  else if (mouseX < width/2 && mouseY > height/2) {
+    mode--
+  }
+  else if (mouseX > width/2 && mouseY > height/2) {
+    mode++
+  }
+  if (currentFile < 0) {
+    currentFile = file.length-1
+  }
+  else if (currentFile > file.length-1) {
+    currentFile = 0
+  }
+  if (mode < 1) {
+    mode = 4
+  }
+  else if (mode > 4) {
+    mode = 0
+  }
+  loadImg()
+}
+
+function loadImg() {
+  img = loadImage(file[currentFile])
+  //img.resize(width, height)
+  img.loadPixels();
 }
 
 // randomly draw circles using the color data from the image
 function drawCircles() {
   for (let i = 0; i < 1000; i++) {
-    let x = random(width);
-    let y = random(height);
+    let x = random(img.width);
+    let y = random(img.height);
     let d = random(1, 10);
     noStroke()
     fill(img.get(x, y));
-    ellipse(x, y, d, d);
+    ellipse(x * width / img.width, y * height / img.height, d, d);
   }
 }
 
 function drawHollowCircles() {
   for (let i = 0; i < 1000; i++) {
-    let x = random(width);
-    let y = random(height);
+    let x = random(img.width);
+    let y = random(img.height);
     let d = random(1, 10);
     fill(255)
     stroke(img.get(x, y));
@@ -132,3 +164,23 @@ function wanderingLine() {
   x = px;
   y = py;
 }
+
+// randomly draw shaped using color data from image
+function drawShapes() {
+  for (let i = 0; i < 1000; i++) {
+    let x = random(img.width);
+    let y = random(img.width);
+    let d = random(1, 10);
+    noStroke()
+    fill(img.get(x, y));
+    ellipse(x, y, d, d);
+  }
+}
+/*
+// make a function that adds 1 to mode when left third of screen is clicked
+function mouseClicked() {
+  if (mouseX > width/3) {
+    mode ++
+  }
+}
+*/
