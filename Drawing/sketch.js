@@ -171,23 +171,25 @@ speed: multiplier for the increment
 Usage:
 pos is mapped to a point between timeline startX and endX when timeline marker is drawn
 
+let zones = [[50,350,50,200],[50,200,200,275],[200,350,200,275],[50,350,275,350]]
+let zone_count = [8,2,1,4]
 */
 
 let timeLineStruct = {minTime: 0, currentTime: 0, maxTime: 86400, increment: 60, speed: 3, offset: 20}
 let timeline
 
-let zones = [[50,350,50,200],[50,200,200,275],[200,350,200,275],[50,350,275,350]]
-let zone_count = [8,2,1,4]
-
 let offset = 50
+
+let seats = [[80,87.5],[140,87.5],[200,87.5],[260,87.5],[320,87.5],[80,162.5],[140,162.5],[200,162.5],[260,162.5],[320,162.5]]
+let circles = []
 
 function setup() {
   createCanvas(400,400)
   timeline = new Timeline(timeLineStruct)
-  test_circle0 = new Circle(0)
-  test_circle1 = new Circle(1)
-  test_circle2 = new Circle(2)
-  test_circle3 = new Circle(3)
+
+  for (let i = 0; i < seats.length; i++) {
+    circles.push(new Circle(i))
+  }
 }
 
 function draw() {
@@ -198,10 +200,10 @@ function draw() {
     text(timeline.currentPos, 350, height - 3.5)
   }
 
-  test_circle0.draw()
-  test_circle1.draw()
-  test_circle2.draw()
-  test_circle3.draw()
+  for (let i = 0; i < circles.length; i++) {
+    circles[i].draw()
+  }
+
   timeline.draw()
   timeline.update()
 }
@@ -212,9 +214,9 @@ function mousePressed() {
 }
 
 class Circle {
-  constructor(zone) {
-    this.x = random(zones[zone][0],zones[zone][1]);
-    this.y = random(zones[zone][2],zones[zone][3]);
+  constructor(seat) {
+    this.x = seats[seat][0];
+    this.y = seats[seat][1];
     this.r = 0;
     this.alpha = 0;
     this.start = random(5000, 7000);
@@ -225,11 +227,11 @@ class Circle {
   draw() {
     if (timeline.currentTime >= this.start && timeline.currentTime <= this.mid) {
       this.alpha = map(timeline.currentTime, this.start, this.mid, 0, 255,true)
-      this.r = map(timeline.currentTime, this.start, this.mid, 0, 100,true)
+      this.r = map(timeline.currentTime, this.start, this.mid, 0, 60,true)
     }
     else if (timeline.currentTime >= this.mid && timeline.currentTime <= this.end) {
       this.alpha = map(timeline.currentTime, this.mid, this.end, 255, 0,true)
-      this.r = map(timeline.currentTime, this.mid, this.end, 100, 0,true)
+      this.r = map(timeline.currentTime, this.mid, this.end, 60, 0,true)
     }
     else {
       this.alpha = 0;
