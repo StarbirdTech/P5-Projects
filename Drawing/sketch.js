@@ -179,18 +179,7 @@ let timeline
 let zones = [[50,350,50,200],[50,200,200,275],[200,350,200,275],[50,350,275,350]]
 let zone_count = [8,2,1,4]
 
-attendance = [
-  {zone: 0, xpos: 0, ypos: 0, start: 5000, end:71400},
-  {zone: 0, xpos: 0, ypos: 0, start: 7000, end:73000},
-  {zone: 1, xpos: 0, ypos: 0, start: 5000, end:71400},
-  {zone: 1, xpos: 0, ypos: 0, start: 5000, end:71400},
-  {zone: 2, xpos: 0, ypos: 0, start: 5000, end:71400},
-  {zone: 2, xpos: 0, ypos: 0, start: 5000, end:71400},
-  {zone: 3, xpos: 0, ypos: 0, start: 5000, end:71400},
-  {zone: 3, xpos: 0, ypos: 0, start: 5000, end:71400},
-]
-
-test_attendance = [[0,5000,71400],[0,5100,71000],[1,5000,71400],[1,5100,71000],[2,5000,71400],[2,5100,71000],[3,5000,71400],[3,5100,71000]]
+let offset = 50
 
 function setup() {
   createCanvas(400,400)
@@ -229,40 +218,25 @@ class Circle {
     this.r = 0;
     this.alpha = 0;
     this.start = random(5000, 7000);
+    this.mid = random(70000, 80000)/2;
     this.end = random(70000, 80000);
-
-    this.rE = 100
-    this.rS = 0
   }
  
   draw() {
-    if (timeline.currentTime >= this.start && timeline.currentTime <= this.end) {
-     
-      let mod = 1
-      this.alpha = map(timeline.currentTime, this.start, this.end/2, 0, 255 ,true)
-
-  
-      this.r = map(timeline.currentTime, this.start, this.end/2, this.rS, this.rE,true)
-
-      if(this.r>99)
-        {
-          this.rS = 100
-          this.rE = 0
-        }
-      if(this.r <1)
-        {
-          this.rS = 0
-          this.rE = 100
-        }
-     
-     
-      fill(0, 255, 0, this.alpha);
-      ellipse(this.x,this.y,this.r);
+    if (timeline.currentTime >= this.start && timeline.currentTime <= this.mid) {
+      this.alpha = map(timeline.currentTime, this.start, this.mid, 0, 255,true)
+      this.r = map(timeline.currentTime, this.start, this.mid, 0, 100,true)
+    }
+    else if (timeline.currentTime >= this.mid && timeline.currentTime <= this.end) {
+      this.alpha = map(timeline.currentTime, this.mid, this.end, 255, 0,true)
+      this.r = map(timeline.currentTime, this.mid, this.end, 100, 0,true)
     }
     else {
       this.alpha = 0;
       this.r = 0;
     }
+    fill(0, 255, 0, this.alpha);
+    ellipse(this.x,this.y,this.r);
   }
 }
 
