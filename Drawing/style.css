@@ -1,8 +1,32 @@
 html, body {
   margin: 0;
   padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(50, 50, 50);
 }
 
 canvas {
   display: block;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+canvas:hover {
+  box-shadow: 0 4px 8px 0 rgba(173, 173, 173, 0.122), 0 6px 20px 0 rgba(102, 102, 102, 0.19);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px     rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px     rgba(0,0,0,0.5); 
 }
