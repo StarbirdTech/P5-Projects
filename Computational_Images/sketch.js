@@ -5,8 +5,11 @@ let y1
 
 let mode = 0
 
-file = ["curri.jpg","frog.jpg","audio_viz_1.jpg","audio_viz_2.png","e.png","glowing_cube.jpg","isa.jpg","splatter.jpg","faceted_shape.png"]
+file = ["curri.jpg","audio_viz_1.jpg","audio_viz_2.png","e.png","glowing_cube.jpg","isa.jpg","splatter.jpg","faceted_shape.png"]
 currentFile = 0
+
+effect = [drawCircles(), drawHollowCircles(), drawLines(), wanderingLine(), drawShapes()]
+currentEffect = 0
 
 function setup() {
   createCanvas(600, 600)
@@ -30,14 +33,14 @@ function draw() {
     fill(255)
     textSize(32)
     textAlign(CENTER, CENTER)
-    text("Press Space to Start", width/2, height/2)
+    text("Click to Start", width/2, height/2)
     pop()
   }
   else if (mode == 1) {
     drawHollowCircles()
   }
   else if (mode == 2) {
-    drawShapes()
+    drawText()
   }
   else if (mode == 3) {
     wanderingLine()
@@ -98,10 +101,10 @@ function mouseClicked() {
     currentFile = 0
   }
   if (mode < 1) {
-    mode = 4
+    mode = 3
   }
-  else if (mode > 4) {
-    mode = 0
+  else if (mode > 3) {
+    mode = 1
   }
   loadImg()
 }
@@ -184,3 +187,16 @@ function mouseClicked() {
   }
 }
 */
+
+// make function that randomly draws text on the screen using the color data from the image
+
+function drawText() {
+  for (let i = 0; i < 1000; i++) {
+    let x = random(img.width);
+    let y = random(img.height);
+    noStroke()
+    fill(img.get(x, y));
+    textSize(random(10,20))
+    text(file[currentFile],x, y);
+  }
+}
