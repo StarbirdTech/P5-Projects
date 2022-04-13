@@ -175,20 +175,60 @@ let zones = [[50,350,50,200],[50,200,200,275],[200,350,200,275],[50,350,275,350]
 let zone_count = [8,2,1,4]
 */
 
+// attd.attendance[0].studios[0].students[i].time
+
 let timeLineStruct = {minTime: 0, currentTime: 0, maxTime: 86400, increment: 60, speed: 3, offset: 20}
 let timeline
 
-let offset = 50
+let Offset = 50
+let Stroke = 5
 
-let seats = [[80,87.5],[140,87.5],[200,87.5],[260,87.5],[320,87.5],[80,162.5],[140,162.5],[200,162.5],[260,162.5],[320,162.5]]
+let rows = 7
+let cols = 8
+
 let circles = []
+
+let w
+
+let attd
+
+function preload() {
+  attd = loadJSON("attendance.json")
+}
 
 function setup() {
   createCanvas(400,400)
+  noStroke()
+
+  rows = attd.attendance.length/2
+  cols = attd.attendance.length/4
+
+  w = (width-Offset*2)/rows
+
   timeline = new Timeline(timeLineStruct)
 
-  for (let i = 0; i < seats.length; i++) {
-    circles.push(new Circle(i))
+  //for loop to iterate through attendance data and count number of students early, late and absent
+  // use these numbers each day to determine the number of circles
+  // like this but not broken
+  /*
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0;col<cols;col++){
+      x = 80 + w*row
+      y = 100 + w * col
+      circles.push(new Circle(x,y,attd.attendance[0].studios[0].students[0].time))
+    }
+  }
+  */
+  for (let day = 0; day < attd.attendance.length; day++) {
+    for (let studio = 0; studio < attd.attendance[day].length; studio++) {
+      for (let student = 0; student < attd.attendance[0].studios[studio].students.length; student++) {
+        let x = width/2 + (studio-2)*120
+        let y = height/2
+        let r = 75
+        circles.push(new Circle(x,y,r,attd.attendance[day].studios[studio].students[student].time))
+        console.log(day,studio,student)
+      }
+    }
   }
 }
 
@@ -196,49 +236,91 @@ function draw() {
   background(50)
 
   if (mouseIsPressed) {
-    text(timeline.currentTime, timeLineStruct.offset, height - 3.5)
-    text(timeline.currentPos, 350, height - 3.5)
+    textAlign(LEFT)
+    text(timeline.currentTime, timeLineStruct.offset, height -  timeLineStruct.offset*.15)
+    textAlign(RIGHT)
+    text(Math.round(timeline.currentPos), width-timeLineStruct.offset, height -  timeLineStruct.offset*.15)
   }
 
+  // draw all circles
   for (let i = 0; i < circles.length; i++) {
     circles[i].draw()
   }
 
-  timeline.draw()
-  timeline.update()
+  //----------------------------------------------------------------------------------
+  //strokeWeight(Stroke)
+  //stroke(200)
+  //noFill()
+  //rect(calcMargins(1),calcMargins(1),width-calcMargins(2),height*.66-calcMargins(2))
+  //----------------------------------------------------------------------------------
+
+  //timeline.draw()
+  //timeline.update()
+
+  //display mouse x and y position
+  //textAlign(CENTER)
+  //text(Math.round(mouseX) + "," + Math.round(mouseY), width/2, 30)
 }
 
-function mousePressed() {
-  timeline.currentTime = timeline.currentTime + timeline.increment
-  timeline.currentPos = map(timeline.currentTime, timeline.minTime, timeline.maxTime, 0, width)
+function calcMargins(marginCount) {
+  return (Offset*marginCount-Stroke*marginCount)
 }
 
 class Circle {
-  constructor(seat) {
-    this.x = seats[seat][0];
-    this.y = seats[seat][1];
-    this.r = 0;
+  constructor(x,y,r,time) {
+    this.x = x;
+    this.y = y;
+    this.r = r;
     this.alpha = 0;
     this.start = random(5000, 7000);
     this.mid = random(70000, 80000)/2;
     this.end = random(70000, 80000);
+    this.sectors = 5;
+    this.time = time;
   }
  
-  draw() {
+  animate() {
     if (timeline.currentTime >= this.start && timeline.currentTime <= this.mid) {
       this.alpha = map(timeline.currentTime, this.start, this.mid, 0, 255,true)
-      this.r = map(timeline.currentTime, this.start, this.mid, 0, 60,true)
+      this.r = map(timeline.currentTime, this.start, this.mid, 0, w,true)
     }
     else if (timeline.currentTime >= this.mid && timeline.currentTime <= this.end) {
       this.alpha = map(timeline.currentTime, this.mid, this.end, 255, 0,true)
-      this.r = map(timeline.currentTime, this.mid, this.end, 60, 0,true)
+      this.r = map(timeline.currentTime, this.mid, this.end, w, 0,true)
     }
     else {
       this.alpha = 0;
       this.r = 0;
     }
     fill(0, 255, 0, this.alpha);
-    ellipse(this.x,this.y,this.r);
+    //ellipse(this.x,this.y,this.r);
+    for (let i = 0; i < this.sectors; i++) {
+      arc(this.x, this.y, this.r, this.r, i*(TWO_PI/this.sectors), (i+1)*(TWO_PI/this.sectors));
+      if (i == 3) {
+        fill(255,0,0)
+      }
+    }
+  }
+
+  draw() {
+    for (let i = 0; i < this.sectors; i++) {
+      arc(this.x, this.y, this.r, this.r, i*(TWO_PI/this.sectors)-1, (i+1)*(TWO_PI/this.sectors)+1);
+      if (this.time == 'Present') {
+        fill(0,255,0)
+      }
+      else if (this.time == 'Late') {
+        fill(255,0,0)
+      }
+      else if (this.time == 'Absent') {
+        noFill()
+      }
+      else if (this.time == 'Dissmissed') {
+        fill(0,0,255)
+      }
+      else {
+        fill(255)
+      }
+    }
   }
 }
 
@@ -259,7 +341,6 @@ class Timeline {
     stroke(200)
     strokeWeight(5)
     line(this.startX, this.yPos, this.endX, this.yPos);
-    //line(20, width - 20, height - 20, width - 20);
 
     // draw the circle
     noStroke()

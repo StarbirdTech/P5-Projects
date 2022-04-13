@@ -1,0 +1,929 @@
+{
+    "attendance": [
+        {
+            "date": "04_1_2022",
+            "studios": [
+                {
+                    "studio": "Blue",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Green",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Pink",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Red",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "04_2_2022",
+            "studios": [
+                {
+                    "studio": "Blue",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Green",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Pink",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Red",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "04_3_2022",
+            "studios": [
+                {
+                    "studio": "Blue",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Green",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Pink",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Red",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "04_4_2022",
+            "studios": [
+                {
+                    "studio": "Blue",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Green",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Pink",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Red",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "04_5_2022",
+            "studios": [
+                {
+                    "studio": "Blue",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Green",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Pink",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                },
+                {
+                    "studio": "Red",
+                    "students": [
+                        {
+                            "student": "Nick",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Isaac",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Kaitlyn",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Logan",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Bob",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "John",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Sam",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Alex",
+                            "time": "Early"
+                        },
+                        {
+                            "student": "Karen",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Will",
+                            "time": "Early"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
