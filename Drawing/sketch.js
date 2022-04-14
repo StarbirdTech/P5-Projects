@@ -50,10 +50,8 @@ function setup() {
 */
 
 function draw() {
-  background(255) 
+  noLoop()
   translate(117,93)
-
- // background(50)
 
   for (let i = 0; i < circles.length; i++) {
     circles[i].draw()
