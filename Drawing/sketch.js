@@ -4,34 +4,43 @@ let circles = []
 let startX = 80
 
 function preload() {
-  //attd = loadJSON("attendance.json")
+  attd = loadJSON("attendance.json")
 }
 
 function setup() {
   createCanvas(400,400)
   noStroke()
+  /*
+  let studio = 0 // 0 - 3
+  let day = 0 // 0 - 4
+  let arc = 0 // 0 - 4
+  let x = 60*(day+1)
+  */
 
-  circles.push(new Arc(startX*1,'Dissmissed',0))
-  circles.push(new Arc(startX*1,'Absent',1))
-  circles.push(new Arc(startX*1,'Present',2))
-  circles.push(new Arc(startX*1,'s',3))
-  circles.push(new Arc(startX*1,'Late',4))
-  circles.push(new Arc(startX*2,'Present',0))
-  circles.push(new Arc(startX*2,'Present',1))
-  circles.push(new Arc(startX*2,'Present',2))
-  circles.push(new Arc(startX*2,'Present',3))
-  circles.push(new Arc(startX*2,'Present',4))
-  circles.push(new Arc(startX*3,'Present',0))
-  circles.push(new Arc(startX*3,'Present',1))
-  circles.push(new Arc(startX*3,'Present',2))
-  circles.push(new Arc(startX*3,'Present',3))
-  circles.push(new Arc(startX*3,'Present',4))
-  circles.push(new Arc(startX*4,'Present',0))
-  circles.push(new Arc(startX*4,'Present',1))
-  circles.push(new Arc(startX*4,'Present',2))
-  circles.push(new Arc(startX*4,'Present',3))
-  circles.push(new Arc(startX*4,'Present',4))
+  for (let studio = 0; studio < attd['studio'].length; studio++) {
+    curStudio = attd['studio'][studio]
+    console.log(curStudio)
+    for (let day = 0; day < curStudio['day'].length; day++) {
+      curDay = curStudio['day'][day]
+      console.log(curDay)
+      for(let arc = 0; arc <  curDay['attendance'].length; arc++) {
+        curAttd = curDay['attendance'][arc]
+        console.log(curAttd['time'])
+        
+        radiusIWant = 0
+        if(curAttd['attendance'] == 'present') {
+          radiusIWant = 10
+        }
+        else if (curAttd['attendance'] == 'absent') {
+          radiusIWant = 20
+        }
 
+        //circle(40 + studio * 40,day * 40, radiusIWant)
+        circles.push(new Arc(studio, day,arc,curAttd['time']))
+      }
+    }
+  }
+}
 /*
   for (let day = 0; day < attd.attendance.length; day++) {
     for (let studio = 0; studio < attd.attendance[day].length; studio++) {
@@ -45,10 +54,11 @@ function setup() {
     }
   }
 */
-}
 
 function draw() {
-  background(50)
+  translate(117,93)
+
+ // background(50)
 
   for (let i = 0; i < circles.length; i++) {
     circles[i].draw()
@@ -56,14 +66,14 @@ function draw() {
 }
 
 class Arc {
-  constructor(x,time,i) {
-    this.x = x;
-    this.y = width/2;
+  constructor(x,y,arc,time) {
     this.r = 50;
+    this.x = x * 55;
+    this.y = y * 55;
     this.time = time;
     this.arc = TWO_PI/5;
-    this.start = i;
-    this.end = i+1;
+    this.start = arc;
+    this.end = arc+1;
   }
 
   draw() {
