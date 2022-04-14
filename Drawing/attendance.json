@@ -6,6 +6,14 @@
                     "attendance": [
                         {
                             "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
                             "time": "Late"
                         },
                         {
@@ -14,15 +22,15 @@
                         },
                         {
                             "student": "Hunter",
-                            "time": "Late"
-                        },
-                        {
-                            "student": "Hunter",
                             "time": "Present"
                         },
                         {
                             "student": "Hunter",
                             "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Absent"
                         }
                     ]
                 },
@@ -91,6 +99,282 @@
                         {
                             "student": "Hunter",
                             "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        }
+                    ]
+                },
+                {
+                    "attendance": [
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "day": [
+                {
+                    "attendance": [
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
+                        }
+                    ]
+                },
+                {
+                    "attendance": [
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        }
+                    ]
+                },
+                {
+                    "attendance": [
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        }
+                    ]
+                },
+                {
+                    "attendance": [
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        }
+                    ]
+                },
+                {
+                    "attendance": [
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "day": [
+                {
+                    "attendance": [
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
+                        }
+                    ]
+                },
+                {
+                    "attendance": [
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        }
+                    ]
+                },
+                {
+                    "attendance": [
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
+                        }
+                    ]
+                },
+                {
+                    "attendance": [
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
                         },
                         {
                             "student": "Hunter",
@@ -180,150 +464,6 @@
                             "student": "Hunter",
                             "time": "Present"
                         },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Late"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        }
-                    ]
-                },
-                {
-                    "attendance": [
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        }
-                    ]
-                },
-                {
-                    "attendance": [
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Late"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "day": [
-                {
-                    "attendance": [
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Absent"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        }
-                    ]
-                },
-                {
-                    "attendance": [
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        }
-                    ]
-                },
-                {
-                    "attendance": [
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Late"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Late"
-                        }
-                    ]
-                },
-                {
-                    "attendance": [
                         {
                             "student": "Hunter",
                             "time": "Present"
@@ -349,115 +489,35 @@
                 {
                     "attendance": [
                         {
-                            "student": "Hunter",
+                            "student": "Anara",
                             "time": "Present"
                         },
                         {
-                            "student": "Hunter",
+                            "student": "Hide",
+                            "time": "Present"
+                        },
+                        {
+                            "student": "Amiyr",
                             "time": "Late"
                         },
                         {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Late"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "day": [
-                {
-                    "attendance": [
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
+                            "student": "Evan",
                             "time": "Late"
                         },
                         {
-                            "student": "Hunter",
-                            "time": "Absent"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        }
-                    ]
-                },
-                {
-                    "attendance": [
-                        {
-                            "student": "Hunter",
+                            "student": "Siena",
                             "time": "Present"
                         },
                         {
-                            "student": "Hunter",
+                            "student": "Ben",
+                            "time": "Dissmissed"
+                        },
+                        {
+                            "student": "Steven",
                             "time": "Present"
                         },
                         {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Late"
-                        }
-                    ]
-                },
-                {
-                    "attendance": [
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Late"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        }
-                    ]
-                },
-                {
-                    "attendance": [
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
+                            "student": "Will",
                             "time": "Present"
                         },
                         {
@@ -474,7 +534,7 @@
                     "attendance": [
                         {
                             "student": "Hunter",
-                            "time": "Present"
+                            "time": "Late"
                         },
                         {
                             "student": "Hunter",
@@ -487,13 +547,21 @@
                         {
                             "student": "Hunter",
                             "time": "Present"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Late"
                         },
                         {
                             "student": "Hunter",
                             "time": "Present"
                         }
                     ]
-                }
+                } 
             ]
         }
     ]

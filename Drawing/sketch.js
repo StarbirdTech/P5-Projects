@@ -19,24 +19,18 @@ function setup() {
 
   for (let studio = 0; studio < attd['studio'].length; studio++) {
     curStudio = attd['studio'][studio]
-    console.log(curStudio)
+    //console.log(curStudio)
     for (let day = 0; day < curStudio['day'].length; day++) {
       curDay = curStudio['day'][day]
-      console.log(curDay)
+      //console.log(curDay)
       for(let arc = 0; arc <  curDay['attendance'].length; arc++) {
         curAttd = curDay['attendance'][arc]
-        console.log(curAttd['time'])
-        
-        radiusIWant = 0
-        if(curAttd['attendance'] == 'present') {
-          radiusIWant = 10
-        }
-        else if (curAttd['attendance'] == 'absent') {
-          radiusIWant = 20
-        }
+        //console.log(curAttd['time'])
+        if(curDay['attendance'].length > 5)
+          print(curDay)
 
         //circle(40 + studio * 40,day * 40, radiusIWant)
-        circles.push(new Arc(studio, day,arc,curAttd['time']))
+        circles.push(new Arc(studio, day,arc,curAttd['time'],curDay['attendance'].length))
       }
     }
   }
@@ -56,6 +50,7 @@ function setup() {
 */
 
 function draw() {
+  background(255) 
   translate(117,93)
 
  // background(50)
@@ -65,13 +60,17 @@ function draw() {
   }
 }
 
+function mousePressed () {
+  save()
+}
+
 class Arc {
-  constructor(x,y,arc,time) {
+  constructor(x,y,arc,time,arcNumber) {
     this.r = 50;
     this.x = x * 55;
     this.y = y * 55;
     this.time = time;
-    this.arc = TWO_PI/5;
+    this.arc = TWO_PI/arcNumber;
     this.start = arc;
     this.end = arc+1;
   }
