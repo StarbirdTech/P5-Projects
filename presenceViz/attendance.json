@@ -6,11 +6,7 @@
                     "attendance": [
                         {
                             "student": "Hunter",
-                            "time": "Present"
-                        },
-                        {
-                            "student": "Hunter",
-                            "time": "Present"
+                            "time": "Late"
                         },
                         {
                             "student": "Hunter",
@@ -18,7 +14,15 @@
                         },
                         {
                             "student": "Hunter",
-                            "time": "Present"
+                            "time": "Late"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Absent"
+                        },
+                        {
+                            "student": "Hunter",
+                            "time": "Absent"
                         },
                         {
                             "student": "Hunter",
@@ -26,7 +30,7 @@
                         },
                         {
                             "student": "Hunter",
-                            "time": "Present"
+                            "time": "Absent"
                         },
                         {
                             "student": "Hunter",
