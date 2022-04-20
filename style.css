@@ -138,6 +138,7 @@ img {
 	}
 }
 
-.card .crown {
-	border: 2px solid #ffd700;
+#highlight {
+	outline: 3px solid #ffd700;
+	outline-offset: -3px;
 }
