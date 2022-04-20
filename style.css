@@ -142,3 +142,8 @@ img {
 	outline: 3px solid #ffd700;
 	outline-offset: -3px;
 }
+	#highlight:hover {
+		outline: 4px solid #ffd700;
+		outline-offset: -3px;
+		box-shadow: 0 4px 8px 0 #ffd700, 0 6px 20px 0 #ffd700;
+	}
