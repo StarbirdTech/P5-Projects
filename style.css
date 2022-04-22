@@ -3,6 +3,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Patua+One');
 
+@mixin card-shadow($color) {
+  box-shadow: 0px 0px 10px $color;
+}
+
 /* Card Based Layout - Base styles */
 
 body {
@@ -145,5 +149,6 @@ img {
 	#highlight:hover {
 		outline: 4px solid #ffd700;
 		outline-offset: -3px;
-		box-shadow: 0 4px 8px 0 #ffd700, 0 6px 20px 0 #ffd700;
+		/*box-shadow: 0 4px 8px 0 #ffd700, 0 6px 20px 0 #ffd700;*/
+		@include card-shadow(#ffd700);
 	}
